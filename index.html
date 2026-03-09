@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Poker Quick Reference</title>
 <style>
 body { font-family: Arial, sans-serif; margin: 20px; background:#111; color:#eee; }
-.tabs { display:flex; gap:10px; margin-bottom:20px; }
+.tabs { display:flex; gap:10px; margin-bottom:20px; flex-wrap: wrap; }
 button { padding:10px 16px; border:none; background:#333; color:#eee; cursor:pointer; border-radius:6px; }
 button.active { background:#4CAF50; }
 .tabcontent { display:none; padding:10px; border:1px solid #333; border-radius:6px; background:#1a1a1a;}
@@ -42,6 +42,7 @@ window.onload = function() {
 <button class="tabbtn" onclick="openTab(event,'threebet')">3-Bet</button>
 <button class="tabbtn" onclick="openTab(event,'vs4bet')">3-Bet Gets 4-Bet</button>
 <button class="tabbtn" onclick="openTab(event,'fourbet')">4-Bet / Jam</button>
+<button class="tabbtn" onclick="openTab(event,'postflop')">Post-Flop</button>
 </div>
 
 <div id="open" class="tabcontent">
@@ -97,6 +98,24 @@ window.onload = function() {
 <tr><th>Situation</th><th>Action</th></tr>
 <tr><td>You 4-bet and get shoved</td><td>Call: QQ+, AK</td></tr>
 <tr><td>Everything else</td><td>Usually fold (consider JJ call only vs known wide 5-bet ranges)</td></tr>
+</table>
+</div>
+
+<div id="postflop" class="tabcontent">
+<h3>Post-Flop Strategy (Practical, Rake-Aware)</h3>
+<p class="note">Default line: value bet thinner than you bluff, especially versus players who call too wide and raise too little.</p>
+<table>
+<tr><th>Spot</th><th>Baseline Plan</th></tr>
+<tr><td>SRP as preflop raiser (IP)</td><td>C-bet 25-33% often on dry A/K-high boards. Check more on wet/connected boards that hit caller range.</td></tr>
+<tr><td>SRP as preflop raiser (OOP)</td><td>Use more checks. Bet stronger value and best draws; avoid auto c-betting marginal one-pair hands on bad textures.</td></tr>
+<tr><td>Single-raised pot sizing</td><td>Small size with range advantage; 60-75% with strong value and high-equity draws on dynamic boards.</td></tr>
+<tr><td>Facing flop stab</td><td>Continue with pair+draw, good overcards+backdoors, and strong draws. Fold weak overcards with no backdoor equity.</td></tr>
+<tr><td>Turn play</td><td>Barrel cards that improve your value/bluffs (overcards, flush/straight cards for your range). Slow down on bricks when called by sticky ranges.</td></tr>
+<tr><td>River decisions</td><td>Value bet hands that get called by worse. Bluff mostly with blockers to villain's strongest bluff-catchers and missed draws.</td></tr>
+<tr><td>3-bet pots (IP)</td><td>C-bet small frequently on high-card boards. On low/wet boards, check more and realize equity with medium strength hands.</td></tr>
+<tr><td>3-bet pots (OOP)</td><td>Play tighter: check-call with medium strength, check-raise with strong value + best draws, avoid low-equity bluffs.</td></tr>
+<tr><td>Population exploit (small stakes)</td><td>Under-bluffed rivers and over-called flops/turns are common. Bluff less on river, value bet more aggressively.</td></tr>
+<tr><td>Red-line control</td><td>Do not force bluffs just to win every pot. Prioritize showdowns with medium strength in rake-heavy games.</td></tr>
 </table>
 </div>
 
