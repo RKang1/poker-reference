@@ -46,30 +46,32 @@ window.onload = function() {
 </div>
 
 <div id="open" class="tabcontent">
-<h3>Opening Ranges</h3>
-<p class="note">Baseline: tighter than pure GTO because rake is high and pool defends imperfectly.</p>
+<h3>Opening Ranges (8-Max + Live Straddle)</h3>
+<p class="note">Baseline for this live-straddled game: tighter than pure GTO because rake is high and pool defends imperfectly.</p>
 <table>
 <tr><th>Position</th><th>Open Hands</th></tr>
-<tr><td>UTG</td><td>22+, AJs+, AQo+, KQs</td></tr>
-<tr><td>LJ</td><td>22+, ATs+, AJo+, KQo, KTs+, QTs+, JTs, T9s, 98s</td></tr>
-<tr><td>HJ</td><td>22+, A9s+, ATo+, KJo+, K9s+, Q9s+, JTs, T9s, 98s, 87s</td></tr>
-<tr><td>CO</td><td>22+, A2s+, A9o+, KTo+, K7s+, QTo+, Q8s+, J9s+, T9s-65s</td></tr>
-<tr><td>BTN</td><td>22+, A2s+, A8o+, K9o+, K5s+, Q9o+, Q7s+, J9o+, T8o+, suited connectors 54s+</td></tr>
-<tr><td>SB</td><td>22+, A2s+, ATo+, KTs+, QTs+, JTs, T9s</td></tr>
+<tr><td>UTG</td><td>55+, AJs+, AQo+, KQs</td></tr>
+<tr><td>LJ</td><td>44+, ATs+, AJo+, KQs, KJs, QJs, JTs</td></tr>
+<tr><td>HJ</td><td>33+, A9s+, ATo+, KQo, KTs+, QTs+, JTs, T9s, 98s</td></tr>
+<tr><td>CO</td><td>22+, A8s+, ATo+, KJo+, K9s+, Q9s+, JTs, T9s, 98s, 87s</td></tr>
+<tr><td>BTN</td><td>22+, A2s+, A9o+, KTo+, K7s+, QTo+, Q8s+, J9s+, T9s-65s</td></tr>
+<tr><td>SB</td><td>22+, A2s+, A8o+, K9o+, K5s+, Q9o+, Q7s+, J9o+, T8o+, suited connectors 54s+</td></tr>
+<tr><td>BB</td><td>Facing the live straddle: fold/call/raise. If folded to BB, BB can open-raise versus the straddle.</td></tr>
+<tr><td>Straddle (last preflop action)</td><td>When folded/checked to you, take option with a raise range wider than UTG: 22+, A2s+, ATo+, KTs+, QTs+, JTs, T9s, 98s.</td></tr>
 </table>
 </div>
 
 <div id="vsopen" class="tabcontent">
-<h3>Facing a Raise</h3>
+<h3>Facing a Raise (8-Max)</h3>
 <table>
 <tr><th>Situation</th><th>Continue With</th></tr>
-<tr><td>UTG / LJ open (IP)</td><td>3-bet: QQ+, AK | Call: 88-JJ, AJs-AQs, AQo, KQs-KJs, QJs</td></tr>
-<tr><td>HJ open (IP)</td><td>3-bet: JJ+, AK, A5s | Call: 66-TT, ATs-AQs, KQs-KTs, QJs, JTs, T9s</td></tr>
+<tr><td>UTG / LJ open (IP)</td><td>3-bet: QQ+, AK | Call: 99-JJ, AQs-AJs, KQs, QJs | Fold most offsuit broadways below AQ.</td></tr>
+<tr><td>HJ / CO open (IP)</td><td>3-bet: JJ+, AK, A5s | Call: 66-TT, ATs-AQs, KQs-KTs, QJs, JTs, T9s</td></tr>
 <tr><td>CO / BTN open (IP)</td><td>3-bet value: TT+, AQs+, AKo, AJo, KQs | 3-bet bluff: A5s-A4s | Call: 44-99, A9s-AJs, KJs-KTs, QJs-QTs, JTs, T9s, 98s</td></tr>
 <tr><td>SB vs open</td><td>Mostly 3-bet or fold. 3-bet: TT+, AQ+, A5s-A4s, KQs | Flat mainly versus small opens with suited broadways and mid pairs.</td></tr>
-<tr><td>BB vs EP/LJ open</td><td>3-bet: QQ+, AK, A5s | Call: 66-JJ, AJs-AQs, KQs, QJs, JTs, T9s | Fold: weak offsuit broadways and low disconnected offsuit hands.</td></tr>
+<tr><td>BB vs UTG/LJ/HJ open</td><td>3-bet: QQ+, AK, A5s | Call: 77-JJ, AJs-AQs, KQs, QJs, JTs, T9s | Fold weak offsuit broadways and low disconnected offsuit hands.</td></tr>
 <tr><td>BB vs CO/BTN open</td><td>3-bet value: TT+, AQ+, KQs | 3-bet bluff: A5s-A2s, KTs-K9s (mix) | Call: 22-99, suited aces, suited broadways, suited connectors 98s-65s, some ATo/KJo/QJo vs small opens.</td></tr>
-<tr><td>Straddle vs open (you act last preflop)</td><td>Defend wider than BB. 3-bet linear: 99+, AQ+, KQs, A5s-A4s | Call: most pairs, suited aces, suited broadways, suited connectors 98s-54s, selected offsuit broadways. Tighten versus 4x+ opens.</td></tr>
+<tr><td>Straddle vs open (you act last preflop)</td><td>Defend wider than BB. 3-bet linear: 99+, AQ+, KQs, A5s-A4s | Call: most pairs, suited aces, suited broadways, suited connectors 98s-54s, selected offsuit broadways. Tighten by ~1 position versus early opens or 4x+ sizing.</td></tr>
 </table>
 </div>
 
@@ -123,4 +125,3 @@ window.onload = function() {
 
 </body>
 </html>
-
