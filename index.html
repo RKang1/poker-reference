@@ -39,8 +39,8 @@ window.onload = function() {
 <div class="tabs">
 <button class="tabbtn" id="defaultTab" onclick="openTab(event,'open')">Open</button>
 <button class="tabbtn" onclick="openTab(event,'vsopen')">Facing Open</button>
-<button class="tabbtn" onclick="openTab(event,'threebet')">3-Bet</button>
-<button class="tabbtn" onclick="openTab(event,'vs4bet')">3-Bet Gets 4-Bet</button>
+<button class="tabbtn" onclick="openTab(event,'threebet')">Facing 3-Bet</button>
+<button class="tabbtn" onclick="openTab(event,'vs4bet')">Facing 4-Bet</button>
 <button class="tabbtn" onclick="openTab(event,'fourbet')">4-Bet / Jam</button>
 <button class="tabbtn" onclick="openTab(event,'postflop')">Post-Flop</button>
 </div>
@@ -76,7 +76,7 @@ window.onload = function() {
 </div>
 
 <div id="threebet" class="tabcontent">
-<h3>Your Open Gets 3-Bet</h3>
+<h3>Facing 3-Bet</h3>
 <table>
 <tr><th>Action</th><th>Hands</th></tr>
 <tr><td>4-Bet</td><td>QQ+, AK (add JJ, AQs at some frequency vs aggressive/wide 3-bettors)</td></tr>
@@ -86,7 +86,7 @@ window.onload = function() {
 </div>
 
 <div id="vs4bet" class="tabcontent">
-<h3>Your 3-Bet Gets 4-Bet</h3>
+<h3>Facing 4-Bet</h3>
 <table>
 <tr><th>Your Hand</th><th>Action</th></tr>
 <tr><td>AA, KK</td><td>Continue always</td></tr>
@@ -125,4 +125,6 @@ window.onload = function() {
 
 </body>
 </html>
+
+
 
